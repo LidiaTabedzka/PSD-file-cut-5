@@ -45,7 +45,7 @@ section {
         }
     }
 }
-h1, h2 {
+h1, h2, h3 {
     letter-spacing: 8px;
     font-weight: bold;
 }
@@ -109,6 +109,20 @@ h1, h2 {
         }
     }
 }
+/*Styles for section: works*/
+.works {
+    .single-work-div {
+        margin: 50px auto;
+    }
+    h3 {
+        font-size: 20px;
+        letter-spacing: 5px;
+        margin: 30px 0;
+    }
+    p {
+        font-size: 14px;
+    }
+}
 
 /*Media queries*/
 @media (max-width: 767px) {
@@ -124,6 +138,7 @@ h1, h2 {
             .box {
                 h2 {
                     width: 300px;
+                    font-size: 30px;
                 }
             }
         }
