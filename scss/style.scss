@@ -26,6 +26,22 @@ section {
             border: 2px solid $accent-color;
             padding: 50px 30px;
             @include flex;
+            h2 {
+                position: absolute;
+                font-size: 34px;
+                background-color: white;
+                height: 50px;
+                width: 500px;
+                margin: 0;
+                @include flex;
+                top: 75px;
+                z-index: 1;
+            }
+            p {
+                line-height: 24px;
+                font-weight: 300;
+                max-width: 560px;
+            }
         }
     }
 }
@@ -82,22 +98,15 @@ h1, h2 {
     }
 }
 
-/*Styles for section: about*/
-.about {
-    h2 {
-        position: absolute;
-        font-size: 34px;
-        background-color: white;
-        height: 50px;
-        width: 500px;
-        margin: 0;
-        @include flex;
-        top: 75px;
-        z-index: 1;
-    }
-    p {
-        line-height: 24px;
-        font-weight: 300;
+/*Styles for section: sevices*/
+.services {
+    background-image: url("../images/layer-4.png");
+    background-size: cover;
+    color: white;
+    .container {
+        .box {
+            border-color: white;
+        }
     }
 }
 
@@ -110,10 +119,13 @@ h1, h2 {
             margin-top: 40px;
         }
     }
-    /*Styles for section: about*/
-    .about {
-        h2 {
-            width: 300px;
+    section {
+        .container {
+            .box {
+                h2 {
+                    width: 300px;
+                }
+            }
         }
     }
 }
