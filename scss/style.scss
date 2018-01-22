@@ -123,6 +123,48 @@ h1, h2, h3 {
         font-size: 14px;
     }
 }
+/*Styles for section: gallery*/
+.gallery {
+    .row {
+        margin: 0;
+    }
+    [class*="col"] {
+        padding: 0;
+    }
+    h3 {
+        font-size: 34px;
+        color: white;
+        padding: 10px 10px 20px 30px;
+    }
+    .padding {
+        padding: 0 10px;
+    }
+    [class*="photo"] {
+        background-size: cover;
+        height: 237px;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: flex-end;
+    }
+    .photo1 {
+        background-image: url("../images/photo1.png");
+    }
+    .photo2 {
+        background-image: url("../images/photo2.png");
+    }
+    .photo3 {
+        background-image: url("../images/photo3.png");
+    }
+    .photo4 {
+        background-image: url("../images/photo4.png");
+    }
+    .photo5 {
+        background-image: url("../images/photo5.png");
+    }
+    .photo6 {
+        background-image: url("../images/photo6.png");
+    }
+}
 
 /*Media queries*/
 @media (max-width: 767px) {
@@ -141,6 +183,28 @@ h1, h2, h3 {
                     font-size: 30px;
                 }
             }
+        }
+    }
+    /*Styles for section: gallery*/
+    .gallery {
+        [class*="col"] {
+            padding: 10px;
+        }
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    /*Styles for section: gallery*/
+    .gallery {
+        h3 {
+            font-size: 17px;
+        }
+    }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+    /*Styles for section: gallery*/
+    .gallery {
+        h3 {
+            font-size: 25px;
         }
     }
 }
