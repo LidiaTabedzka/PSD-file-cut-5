@@ -166,7 +166,44 @@ h1, h2, h3 {
     }
 }
 
+/*Styles for section: contact*/
+.contact {
+    button {
+        background-color: $accent-color;
+        color: white;
+        border: 2px solid $accent-color;
+        width: 400px;
+        height: 60px;
+        letter-spacing: 2px;
+        transition: 0.3s;
+        margin-top: 30px;
+        &:hover {
+            background-color: white;
+            color: $accent-color;
+        }
+    }
+}
+
+/*Styles for section: footer*/
+.footer-div {
+    @include flex;
+    flex-direction: row;
+    padding-bottom: 50px;
+    p {
+        padding-left: 20px;
+        font-size: 14px;
+    }
+}
+
 /*Media queries*/
+@media (max-width: 500px) {
+    /*Styles for section: contact*/
+    .contact {
+        button {
+            width: 250px;
+        }
+    }
+}
 @media (max-width: 767px) {
     /*Styles for section: hero*/
     .hero {

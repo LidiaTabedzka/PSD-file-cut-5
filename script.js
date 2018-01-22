@@ -1,4 +1,7 @@
 $(function(){
+    var heroSection = $("#heroSection");
+    heroSection.localScroll({duration:800});
+
     setInterval(showCircle, 500);
 
     function showCircle(){
