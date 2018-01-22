@@ -1,10 +1,37 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+
+/*Variables*/
+$accent-color: #3c3c3c;
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
 body {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     font-family: 'Lato', sans-serif;
+    color: $accent-color;
+    font-size: 16px;
+}
+section {
+    .container {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        position: relative;
+        .box {
+            border: 2px solid $accent-color;
+            padding: 50px 30px;
+            @include flex;
+        }
+    }
+}
+h1, h2 {
+    letter-spacing: 8px;
+    font-weight: bold;
 }
 
 /*Styles for section: hero*/
@@ -12,17 +39,13 @@ body {
     height: 100vh;
     background-image: url('../images/layer-8.png');
     background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center; 
+    @include flex;
     color: white;
     position: relative;
     h1 {
         font-size: 54px;
         margin-top: 100px;
         margin-bottom: 40px;
-        letter-spacing: 8px;
-        font-weight: bold;
     }
     p {
         font-size: 15px;
@@ -35,10 +58,8 @@ body {
         position: absolute;
         bottom: 50px;
         border: 2px solid white;
-        display: flex;
-        flex-direction: column;
+        @include flex;
         justify-content: space-evenly;
-        align-items: center;
         height: 40px;
         width: 25px;
         border-radius: 15px;
@@ -61,6 +82,24 @@ body {
     }
 }
 
+/*Styles for section: about*/
+.about {
+    h2 {
+        position: absolute;
+        font-size: 34px;
+        background-color: white;
+        height: 50px;
+        width: 500px;
+        margin: 0;
+        @include flex;
+        top: 75px;
+        z-index: 1;
+    }
+    p {
+        line-height: 24px;
+        font-weight: 300;
+    }
+}
 
 /*Media queries*/
 @media (max-width: 767px) {
@@ -69,6 +108,12 @@ body {
         h1 {
             font-size: 40px;
             margin-top: 40px;
+        }
+    }
+    /*Styles for section: about*/
+    .about {
+        h2 {
+            width: 300px;
         }
     }
 }
