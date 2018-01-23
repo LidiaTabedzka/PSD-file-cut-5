@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
+/*Variables*/
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  color: #3c3c3c;
+  font-size: 16px; }
+
+section .container {
+  padding-top: 100px;
+  padding-bottom: 100px; }
+
+fieldset {
+  border: 2px solid #3c3c3c;
+  padding: 30px 30px 50px; }
+  fieldset legend {
+    font-size: 34px;
+    border: none;
+    width: 500px;
+    letter-spacing: 8px;
+    font-weight: bold; }
+  fieldset p {
+    line-height: 24px;
+    font-weight: 300;
+    margin: 0 auto;
+    max-width: 560px; }
+
+h1, h3 {
+  letter-spacing: 8px;
+  font-weight: bold; }
+
+/*Styles for section: hero*/
+.hero {
+  height: 100vh;
+  background-image: url("../images/layer-8.png");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  position: relative; }
+  .hero h1 {
+    font-size: 54px;
+    margin-top: 100px;
+    margin-bottom: 40px; }
+  .hero p {
+    font-size: 15px;
+    letter-spacing: 1px;
+    display: inline-block;
+    max-width: 600px;
+    line-height: 29px; }
+  .hero .scroll-button {
+    position: absolute;
+    bottom: 50px;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 40px;
+    width: 25px;
+    border-radius: 15px;
+    padding: 0;
+    margin: 0;
+    list-style-type: none; }
+    .hero .scroll-button .scroll-button-circle {
+      width: 5px;
+      height: 5px;
+      background-color: white;
+      border-radius: 50%;
+      visibility: hidden; }
+    .hero .scroll-button .visible {
+      visibility: visible; }
+    .hero .scroll-button .hidden {
+      display: none; }
+
+/*Styles for section: sevices*/
+.services {
+  background-image: url("../images/layer-4.png");
+  background-size: cover;
+  color: white; }
+  .services fieldset {
+    border-color: white; }
+    .services fieldset legend {
+      color: inherit; }
+
+/*Styles for section: works*/
+.works .single-work-div {
+  margin: 50px auto; }
+  .works .single-work-div img {
+    transition: 0.5s; }
+  .works .single-work-div:hover img {
+    transform: scale(1.1); }
+
+.works h3 {
+  font-size: 20px;
+  letter-spacing: 5px;
+  margin: 30px 0; }
+
+.works p {
+  font-size: 14px; }
+
+/*Styles for section: gallery*/
+.gallery .row {
+  margin: 0;
+  display: flex; }
+
+.gallery .col1, .gallery .col3 {
+  flex: 1; }
+
+.gallery .col2 {
+  flex: 2; }
+
+.gallery [class*="col"] {
+  padding: 0;
+  transition: 0.7s; }
+  .gallery [class*="col"]:hover {
+    flex: 3; }
+
+.gallery h3 {
+  font-size: 34px;
+  color: white;
+  padding: 10px 10px 20px 30px; }
+
+.gallery .padding {
+  padding: 0 10px; }
+
+.gallery [class*="photo"] {
+  background-size: cover;
+  height: 237px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: flex-end; }
+
+.gallery .photo1 {
+  background-image: url("../images/photo1.png"); }
+
+.gallery .photo2 {
+  background-image: url("../images/photo2.png"); }
+
+.gallery .photo3 {
+  background-image: url("../images/photo3.png"); }
+
+.gallery .photo4 {
+  background-image: url("../images/photo4.png"); }
+
+.gallery .photo5 {
+  background-image: url("../images/photo5.png"); }
+
+.gallery .photo6 {
+  background-image: url("../images/photo6.png"); }
+
+/*Styles for section: contact*/
+.contact button {
+  background-color: #3c3c3c;
+  color: white;
+  border: 2px solid #3c3c3c;
+  width: 400px;
+  height: 60px;
+  letter-spacing: 2px;
+  transition: 0.3s;
+  margin-top: 30px; }
+  .contact button:hover {
+    background-color: white;
+    color: #3c3c3c; }
+
+/*Styles for section: footer*/
+.footer-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-direction: row;
+  padding-bottom: 50px; }
+  .footer-div p {
+    padding-left: 20px;
+    font-size: 14px; }
+
+/*Media queries*/
+@media (max-width: 500px) {
+  /*Styles for section: contact*/
+  .contact button {
+    width: 250px; } }
+
+@media (max-width: 767px) {
+  /*Styles for section: hero*/
+  .hero h1 {
+    font-size: 40px;
+    margin-top: 40px; }
+  fieldset legend {
+    width: 300px;
+    font-size: 30px; }
+  /*Styles for section: gallery*/
+  .gallery .row {
+    flex-direction: column; }
+  .gallery [class*="col"] {
+    padding: 10px; }
+    .gallery [class*="col"]:hover h3 {
+      font-size: 40px; } }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /*Styles for section: gallery*/
+  .gallery h3 {
+    font-size: 17px; } }
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  /*Styles for section: gallery*/
+  .gallery h3 {
+    font-size: 25px; } }
+
+/*# sourceMappingURL=style.css.map */
